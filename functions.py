@@ -4,9 +4,9 @@ from pydantic import BaseModel
 
 
 # # importer le modèle, les scalerer et les labelencoderoder
-encoder = pickle.load("encoderoders")
+encoder = pickle.load("encoders")
 model = pickle.load("model")
-scaler = pickle.load("scalerers")
+scaler = pickle.load("scalers")
 
 class Config_donnees(BaseModel):
     age:int
