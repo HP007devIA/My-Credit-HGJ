@@ -1,31 +1,21 @@
+from pydantic import BaseModel
 from fastapi import FastAPI
 import uvicorn
-from pydantic import BaseModel
-
 
 class Square(BaseModel):
-    age : int
+    n : int
 
-app = FastAPI(
-    title= "Myfirst API",
-    description="""
-This is your description app, written in markdown code
-# This is a title
-* This is a bullet point
-' This is a code block'
-"""
-)
+app = FastAPI(title= "My First API",)
 
-n=None
-
-# @app.get('/square')
-# def square(n: int= None) -> int:
-#     if n == None: return "Please enter a number"
-#     else:return int(n)*int(n)
+def square_(n):
+    try:
+        return n*n
+    except:
+        return "Please enter a number"
 
 @app.post('/square')
 def square(s:Square) -> str:
-    if s.n == None: return "Please enter a number"
+    if s.n == None:return "Please enter a number"
     else:return str(int(s.n)*int(s.n))
 
 if __name__ == '__main__':
