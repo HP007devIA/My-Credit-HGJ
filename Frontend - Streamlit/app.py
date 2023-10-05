@@ -1,9 +1,11 @@
 # librairies
 import streamlit as st
+import joblib
+from functions import prediction_credit
 
 
 # Model 
-model = ''
+#model = joblib.load('')
 
 
 #############################
@@ -102,3 +104,6 @@ poutcome = st.radio("Résultat de la derniere campagne avec ce client ?",
                     'failure',
                     'other',
                     'success'))
+
+if st.button("prediction"):
+    st.write(prediction_credit(age, job, marital, education, default, balance, housing, loan, contact, day, month, duration, campaign, pdays, previous, poutcome))
