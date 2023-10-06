@@ -111,6 +111,7 @@ if st.button("prediction"):
         "housing": housing,
         "loan": loan,
         "day": day,
+        "contact": "cellular",
         "month": month,
         "duration": duration,
         "campaign": campaign,
@@ -118,6 +119,7 @@ if st.button("prediction"):
         "previous": previous,
         "poutcome": poutcome
     }
+    st.write(data)
 
     api_url = "https://api-isen-g3-24e0384d6934.herokuapp.com/"
 
