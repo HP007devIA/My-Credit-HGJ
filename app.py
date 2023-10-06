@@ -119,7 +119,7 @@ if st.button("prediction"):
         "poutcome": poutcome
     }
 
-    api_url = "http://votre-api.com/votre-endpoint-de-prediction"
+    api_url = "https://api-isen-g3-24e0384d6934.herokuapp.com/"
 
     response = requests.post(api_url, json=data)
 
