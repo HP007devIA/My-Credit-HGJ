@@ -111,7 +111,7 @@ if st.button("prediction"):
         "housing": housing,
         "loan": loan,
         "day": day,
-        "contact": "cellular",
+        "contact": "telephone",
         "month": month,
         "duration": duration,
         "campaign": campaign,
@@ -121,7 +121,7 @@ if st.button("prediction"):
     }
     st.write(data)
 
-    api_url = "https://api-isen-g3-24e0384d6934.herokuapp.com/"
+    api_url = "https://api-isen-g3-24e0384d6934.herokuapp.com/bank_loan"
 
     response = requests.post(api_url, json=data)
 
